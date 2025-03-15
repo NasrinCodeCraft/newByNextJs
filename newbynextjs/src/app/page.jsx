@@ -1,22 +1,15 @@
-async function getUser() {
-  let response = await fetch("https://jsonplaceholder.typicode.com/users");
-  let users = await response.json();
-  return users;
-}
+import Link from "next/link";
 
-export default async function showUsers() {
-  let allUsers = await getUser();
-  return (
+
+export default function Home() {
+  return(
     <div>
-      <ul>
-        {
-          allUsers.map(
-            (user,index)=>(
-                <li key={index}>{user.name}</li>
-            )
-          )
-        }
-      </ul>
+      <h1>آکادمی نسرین مختاری</h1>
+      <Link href="/profile">
+            <button>
+              view profile  
+            </button>  
+      </Link>
     </div>
   )
 }
