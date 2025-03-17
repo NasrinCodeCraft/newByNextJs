@@ -1,8 +1,12 @@
+import ProductList from "@/components/ProductList";
 
-export default function Home() {
-  return(
-    <div>
-      <h1>آکادمی نسرین مختاری</h1>
-    </div>
-  )
+export default async function Home() {
+    let res = await fetch("https://fakestoreapi.com/products/");
+    let products = await res.json();
+
+    return (
+        <div className="home">
+            <ProductList products={products} />
+        </div>
+    );
 }
