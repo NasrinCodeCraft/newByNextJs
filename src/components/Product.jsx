@@ -13,7 +13,10 @@ export default function Product({ product }) {
             <img src={product.image} alt={product.title} />
             <h2>{product.title}</h2>
             <p>${product.price}</p>
-            <button onClick={()=>{addToCart(product)}}>Add to cart</button>
+            <button onClick={()=>{
+                addToCart(product)
+                alert("Product added:" + product.title)
+                }}>Add to cart</button>
             <Link href={`/${product.id}`}>View more</Link>
         </div>
     );
