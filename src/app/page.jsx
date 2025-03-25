@@ -7,7 +7,6 @@ export default async function Home() {
 
     return (
         <div className="home">
-            <Link href="/Cart">Cart</Link>
             <ProductList products={products} />
         </div>
     );
