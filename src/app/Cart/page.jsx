@@ -1,30 +1,11 @@
+"use client"
+
+import { useContext } from "react";
+import {CartContext} from "@/contexts/CartContext";
+
 export default function Cart() {
-    let cart = [
-        {
-            "id": 1,
-            "title": "aasddad",
-            "price": 109.95,
-            "description": "SDFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF",
-            "category": "fdffd",
-            "image": "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg",
-            "rating": {
-                "rate": 3.9,
-                "count": 120
-            }
-        },
-        {
-            "id": 2,
-            "title": "zczsxcxzczc",
-            "price": 109.95,
-            "description": "ascfffffffffffffddddddddddddddddddd",
-            "category": "sddddddddddd",
-            "image": "https://fakestoreapi.com/img/71-3HjGNDUL._AC_SY879._SX._UX._SY._UY_.jpg",
-            "rating": {
-                "rate": 6.9,
-                "count": 100
-            }
-        }
-    ]; // Assuming this is a placeholder for actual cart items
+
+    let {cart, removeFromCart} = useContext(CartContext);
 
     return (
         <div className="cart">
@@ -39,7 +20,7 @@ export default function Cart() {
                             <div>
                                 <h2>{product.title}</h2>
                                 <p>{product.price}</p>
-                                <button>Remove</button>
+                                <button onClick={ ()=> {removeFromCart(product.id)} }>Remove</button>
                             </div>
                         </div>
                     ))

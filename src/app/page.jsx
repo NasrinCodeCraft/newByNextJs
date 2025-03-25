@@ -1,4 +1,5 @@
 import ProductList from "@/components/ProductList";
+import Link from "next/link"
 
 export default async function Home() {
     let res = await fetch("https://fakestoreapi.com/products/");
@@ -6,6 +7,7 @@ export default async function Home() {
 
     return (
         <div className="home">
+            <Link href="/Cart">Cart</Link>
             <ProductList products={products} />
         </div>
     );
