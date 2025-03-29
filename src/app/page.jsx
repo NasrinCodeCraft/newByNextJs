@@ -1,5 +1,16 @@
 import ProductList from "@/components/ProductList";
-import Link from "next/link"
+
+export function generateMetadata() {
+    return {
+        title: "Home|Your online shop",
+        description: "Browse amazing Products...",
+        openGraph: {
+            title: "Home|Your online shop social media",
+            description: "Browse amazing products social media",
+        }
+
+    }
+}
 
 export default async function Home() {
     let res = await fetch("https://fakestoreapi.com/products/");
