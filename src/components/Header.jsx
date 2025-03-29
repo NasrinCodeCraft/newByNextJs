@@ -44,9 +44,9 @@ export default function Header() {
       </div>
 
       <div className="social-media-links">
-        <a href="https://saeed-sharifi.ir/" target="_blank" rel="noopener noreferrer">Website</a>
-        <a href="https://instagram.com/shariff_saeed" target="_blank" rel="noopener noreferrer">Instagram</a>
-        <a href="https://linkedin.com/in/shariff-saeed" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="https://portfolio-web-s-git-254439-mokhtarinasrin200-gmailcoms-projects.vercel.app/" target="_blank" rel="noopener noreferrer">Website</a>
+        <a href="https://instagram.com/frontendcoffee" target="_blank" rel="noopener noreferrer">Instagram</a>
+        <a href="https://linkedin.com/in/dev-nasrin" target="_blank" rel="noopener noreferrer">LinkedIn</a>
       </div>
     </header>
   );
